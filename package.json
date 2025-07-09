@@ -1,0 +1,21 @@
+{
+  "name": "@spichka-media/tg-comment-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "node --import=./dist/bootstrap.js dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "17.0.1",
+    "node-cron": "4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.10",
+    "typescript": "5.2.2"
+  }
+}

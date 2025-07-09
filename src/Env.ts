@@ -28,6 +28,10 @@ export class Env {
         this.vars["token"] = BOT_TOKEN;
         this.vars["replyMsgText"] = replyMsgTextArray;
         this.vars["channelChatId"] = BOT_CHANNEL_CHAT_ID;
+        
+        console.log("token: " + this.vars["token"] );
+        console.log("replyMsgText: " + this.vars["replyMsgText"]);
+        console.log("channelChatId: " + this.vars["channelChatId"]);
     }
 
     /**

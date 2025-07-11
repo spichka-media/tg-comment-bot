@@ -68,6 +68,10 @@ export class TgBotApi {
     }
     
     public async loadMessageId(): Promise<number | null> {
+        if (!fs.existsSync(TgBotApi.fileName)) {
+            return null;
+        }
+        
         const defPromise = makeDeferredPromise();
         this.rStream = fs.createReadStream(TgBotApi.fileName,);
 

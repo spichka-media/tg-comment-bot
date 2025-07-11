@@ -36,7 +36,7 @@ async function run(api: TgBotApi, lastMessageId: number | null, replyMsgText: st
 
     const message = response.result as ChannelMessage;
     const {messageId, text} = message;
-
+    
     if (lastMessageId === messageId) {
         await api.saveMessageId(lastMessageId);
         return;
@@ -45,7 +45,7 @@ async function run(api: TgBotApi, lastMessageId: number | null, replyMsgText: st
     const randomIndex = Math.floor(Math.random() * replyMsgText.length);
     const replyText = replyMsgText[randomIndex];
     lastMessageId = messageId;
-
+    
     const replyResult = await api.replyToMessage(messageId, replyText);
 
     if (replyResult.errCode) {

@@ -36,8 +36,6 @@ async function run(api: TgBotApi, lastMessageId: number | null, replyMsgText: st
 
     const message = response.result as ChannelMessage;
     const {messageId, text} = message;
-
-    console.log("get result. messageId: " + messageId);
     
     if (lastMessageId === messageId) {
         await api.saveMessageId(lastMessageId);

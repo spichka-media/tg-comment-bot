@@ -42,8 +42,6 @@ async function run(api: TgBotApi, lastMessageId: number | null, replyMsgText: st
         return;
     }
 
-    console.log("try reply. lastMessageId: " + lastMessageId + "messageId: " + messageId)
-
     const randomIndex = Math.floor(Math.random() * replyMsgText.length);
     const replyText = replyMsgText[randomIndex];
     lastMessageId = messageId;

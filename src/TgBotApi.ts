@@ -38,7 +38,8 @@ export class TgBotApi {
         }
 
         const lastPinnedMsg = result["pinned_message"];
-        return {result: {messageId: lastPinnedMsg["message_id"], text: lastPinnedMsg["text"] || lastPinnedMsg["caption"]}}
+        const text = lastPinnedMsg["text"] || lastPinnedMsg["caption"] || "text not found"
+        return {result: {messageId: lastPinnedMsg["message_id"], text }}
     }
     
     public async replyToMessage(message_id: number, text: string): Promise<Response<boolean>> {

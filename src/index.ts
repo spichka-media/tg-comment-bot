@@ -53,7 +53,7 @@ async function run(api: TgBotApi, lastMessageId: number | null, replyMsgText: st
         return;
     }
 
-    console.log(`replying to ${text.substring(0, 16)}... (message_id: ${lastMessageId})`);
     await api.saveMessageId(lastMessageId);
+    console.log(`replying to ${text.substring(0, 16)}... (message_id: ${lastMessageId})`);
 }
 
